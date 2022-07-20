@@ -58,3 +58,5 @@ yarn add -D vite-plugin-eslint
 ## 6. 参考官网按需引入 element-plus 
 
 ## 7. 参考官网 引入 pinia
+
+## 8. 引入 vue-VueRouter
