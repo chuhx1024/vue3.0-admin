@@ -33,5 +33,24 @@ yarn create vite
 ## 4. 项目配置 Eslint + Prrttier
 ```sh
 npm i -D eslint
-yarn eslint --init
+npx eslint --init
+
+How would you like to use ESLint? · style
+✔ What type of modules does your project use? · esm
+✔ Which framework does your project use? · vue
+✔ Does your project use TypeScript? · No / Yes
+✔ Where does your code run? · browser
+✔ How would you like to define a style for your project? · guide
+✔ Which style guide do you want to follow? · standard
+✔ What format do you want your config file to be in? · JavaScript
+```
+
+## 5. eslint 不通过 项目报错提示
+```js
+yarn add -D vite-plugin-eslint
+
+// 增加下面的配置项,这样在运行时就能检查eslint规范
+    eslintPlugin({
+        include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue']
+    })
 ```
