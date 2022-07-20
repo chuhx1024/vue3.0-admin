@@ -15,7 +15,16 @@ const routes = [
             }
         ]
     },
-    { path: '/about', component: () => import('@/components/HelloWorld.vue') }
+    {
+        path: '/about',
+        component: BasicLayout,
+        children: [
+            {
+                path: '/about',
+                component: () => import('@/components/HelloWorld.vue')
+            }
+        ]
+    }
 ]
 
 const router: Router = createRouter({
