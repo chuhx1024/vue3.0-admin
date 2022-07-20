@@ -5,8 +5,8 @@ import {
 } from 'vue-router'
 
 const routes = [
-    { path: '/', component: () => import('../components/HomePage.vue') },
-    { path: '/about', component: () => import('../components/HelloWorld.vue') }
+    { path: '/', component: () => import('@/components/HomePage.vue') },
+    { path: '/about', component: () => import('@/components/HelloWorld.vue') }
 ]
 
 const router: Router = createRouter({

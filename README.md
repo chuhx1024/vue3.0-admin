@@ -60,3 +60,7 @@ yarn add -D vite-plugin-eslint
 ## 7. 参考官网 引入 pinia
 
 ## 8. 引入 vue-VueRouter
+
+## 9. 项目配置别名 @
+- 因为用到 node 的 path 模块 
+- 所以需要安装 yarn add @types/node -D
