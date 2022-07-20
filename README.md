@@ -54,3 +54,7 @@ yarn add -D vite-plugin-eslint
         include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue']
     })
 ```
+
+## 6. 参考官网按需引入 element-plus 
+
+## 7. 参考官网 引入 pinia
