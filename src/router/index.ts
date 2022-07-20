@@ -3,9 +3,18 @@ import {
     createRouter,
     createWebHistory
 } from 'vue-router'
-
+import BasicLayout from '@/layout/BasicLayout.vue'
 const routes = [
-    { path: '/', component: () => import('@/components/HomePage.vue') },
+    {
+        path: '/',
+        component: BasicLayout,
+        children: [
+            {
+                path: '/home',
+                component: () => import('@/components/HomePage.vue')
+            }
+        ]
+    },
     { path: '/about', component: () => import('@/components/HelloWorld.vue') }
 ]
 

@@ -64,3 +64,8 @@ yarn add -D vite-plugin-eslint
 ## 9. 项目配置别名 @
 - 因为用到 node 的 path 模块 
 - 所以需要安装 yarn add @types/node -D
+
+## 10. 项目中使用 sass
+```sh
+yarn add sass -D
+```
