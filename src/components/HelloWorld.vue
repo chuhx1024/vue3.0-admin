@@ -29,6 +29,9 @@ const count = ref(0)
         in your IDE for a better DX
     </p>
     <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+    <el-button
+    >123</el-button>
+    <el-button type="primary">Primary</el-button>
 </template>
 
 <style scoped>
