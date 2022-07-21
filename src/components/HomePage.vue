@@ -1,4 +1,5 @@
 <template>
+    <el-icon><AddLocation /></el-icon>
     <div>HomePage</div>
     <div>HomePage</div>
     <div>HomePage</div>
