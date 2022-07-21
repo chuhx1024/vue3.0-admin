@@ -3,18 +3,14 @@ import { ref } from 'vue'
 import { useAppStore } from '../store/app'
 import { storeToRefs } from 'pinia'
 const store = useAppStore()
-console.log(store, 123)
 // 如果解构 就没有响应式了 需要借助 storeToRefs
 const { sidebar } = storeToRefs(store)
-
-defineProps<{ msg: string }>()
 
 const count = ref(0)
 
 </script>
 
 <template>
-    <h1>{{ msg }}</h1>
 
     <div class="card">
         <button type="button" @click="count++">count is {{ count }}</button>
@@ -36,8 +32,8 @@ const count = ref(0)
         in your IDE for a better DX
     </p>
     <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
-    <el-button type="primary" @click="store.TOGGLE_SIDEBAR(false)">折叠</el-button>
-    <el-button  @click="store.TOGGLE_SIDEBAR(true)">展开</el-button>
+    <el-button type="primary" @click="store.TOGGLE_SIDEBAR">折叠</el-button>
+    <el-button  @click="store.TOGGLE_SIDEBAR">展开</el-button>
     <p>Menu状态: {{sidebar.opened}}</p>
 </template>
 

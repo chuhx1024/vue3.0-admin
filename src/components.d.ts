@@ -19,6 +19,10 @@ declare module '@vue/runtime-core' {
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     HomePage: typeof import('./components/HomePage.vue')['default']
+    IEpAddLocation: typeof import('~icons/ep/add-location')['default']
+    IEpApple: typeof import('~icons/ep/apple')['default']
+    IEpBicycle: typeof import('~icons/ep/bicycle')['default']
+    IEpCircleCheckFilled: typeof import('~icons/ep/circle-check-filled')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

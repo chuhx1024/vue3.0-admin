@@ -21,7 +21,7 @@ import TheMainApp from './ components/theMainApp/index.vue'
 
 </script>
 <style lang="scss" scoped>
-.basicLayout-container {
-    background-color: pink;
-}
+// .basicLayout-container {
+//     // background-color: pink;
+// }
 </style>

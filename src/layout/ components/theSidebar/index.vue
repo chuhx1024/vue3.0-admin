@@ -1,11 +1,12 @@
 <template>
-    <div class="index-container">
-        <el-aside width="200px">
+    <div class="the-sidebar-container">
+        <el-aside :width="sidebar.opened? '64px': '200px'" >
             <el-menu
                 default-active="2"
                 router
-                class="el-menu-vertical-demo"
-                :collapse="isCollapse"
+                active-text-color="#ffd04b"
+                background-color="#545c64"
+                :collapse="sidebar.opened"
             >
                 <el-sub-menu index="1">
                     <template #title>
@@ -26,8 +27,80 @@
                     </el-sub-menu>
                 </el-sub-menu>
                 <el-menu-item index="/home">
-                    <el-icon><icon-menu /></el-icon>
+                    <el-icon><Menu /></el-icon>
                     <template #title>Navigator Two</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
+                </el-menu-item>
+                <el-menu-item index="/about">
+                    <el-icon><setting /></el-icon>
+                    <template #title>Navigator Four</template>
                 </el-menu-item>
                 <el-menu-item index="/about">
                     <el-icon><setting /></el-icon>
@@ -39,6 +112,21 @@
 </template>
 
 <script lang='ts' setup>
-import { ref } from 'vue'
-const isCollapse = ref(false)
+import { useAppStore } from '@/store/app'
+import { storeToRefs } from 'pinia'
+const store = useAppStore()
+// 如果解构 就没有响应式了 需要借助 storeToRefs
+const { sidebar } = storeToRefs(store)
 </script>
+<style lang="scss" scoped>
+.the-sidebar-container {
+    // background-color: #545c64;
+    background-color: red;
+    height: 100vh;
+    overflow: hidden;
+    .el-aside {
+        transition: width 1s;
+
+    }
+}
+</style>
