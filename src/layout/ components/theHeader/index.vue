@@ -11,6 +11,6 @@ import Hamburger from '../theSidebar/Hamburger.vue'
 .header-container {
     height: 100%;
     line-height: 60px;
-    background-color: yellow;
+    border-bottom: 1px solid #ccc;
 }
 </style>

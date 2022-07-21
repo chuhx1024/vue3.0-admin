@@ -1,11 +1,10 @@
 <template>
     <div class="the-sidebar-container">
-        <el-aside :width="sidebar.opened? '64px': '200px'" >
+        <logo />
+        <el-aside class="awesome-scroll" :width="sidebar.opened? '64px': '200px'" >
             <el-menu
                 default-active="2"
                 router
-                active-text-color="#ffd04b"
-                background-color="#545c64"
                 :collapse="sidebar.opened"
             >
                 <el-sub-menu index="1">
@@ -70,42 +69,6 @@
                     <el-icon><setting /></el-icon>
                     <template #title>Navigator Four</template>
                 </el-menu-item>
-                <el-menu-item index="/about">
-                    <el-icon><setting /></el-icon>
-                    <template #title>Navigator Four</template>
-                </el-menu-item>
-                <el-menu-item index="/about">
-                    <el-icon><setting /></el-icon>
-                    <template #title>Navigator Four</template>
-                </el-menu-item>
-                <el-menu-item index="/about">
-                    <el-icon><setting /></el-icon>
-                    <template #title>Navigator Four</template>
-                </el-menu-item>
-                <el-menu-item index="/about">
-                    <el-icon><setting /></el-icon>
-                    <template #title>Navigator Four</template>
-                </el-menu-item>
-                <el-menu-item index="/about">
-                    <el-icon><setting /></el-icon>
-                    <template #title>Navigator Four</template>
-                </el-menu-item>
-                <el-menu-item index="/about">
-                    <el-icon><setting /></el-icon>
-                    <template #title>Navigator Four</template>
-                </el-menu-item>
-                <el-menu-item index="/about">
-                    <el-icon><setting /></el-icon>
-                    <template #title>Navigator Four</template>
-                </el-menu-item>
-                <el-menu-item index="/about">
-                    <el-icon><setting /></el-icon>
-                    <template #title>Navigator Four</template>
-                </el-menu-item>
-                <el-menu-item index="/about">
-                    <el-icon><setting /></el-icon>
-                    <template #title>Navigator Four</template>
-                </el-menu-item>
             </el-menu>
         </el-aside>
     </div>
@@ -114,19 +77,21 @@
 <script lang='ts' setup>
 import { useAppStore } from '@/store/app'
 import { storeToRefs } from 'pinia'
+import Logo from './Logo.vue'
 const store = useAppStore()
 // 如果解构 就没有响应式了 需要借助 storeToRefs
 const { sidebar } = storeToRefs(store)
 </script>
 <style lang="scss" scoped>
 .the-sidebar-container {
-    // background-color: #545c64;
-    background-color: red;
-    height: 100vh;
     overflow: hidden;
+    border-right: 1px solid #ccc;
     .el-aside {
         transition: width 1s;
-
+        height: 100vh;
+        .el-menu {
+            border: none;
+        }
     }
 }
 </style>

@@ -1,0 +1,24 @@
+@import './common.scss';
+
+.awesome-scroll {
+    scrollbar-color: #d8d8d8;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+    position: relative;
+
+    &::-webkit-scrollbar {
+        width: 2px;
+        height: 1px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #d8d8d8;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #fff;
+        border-radius: 3px;
+        box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    }
+}
